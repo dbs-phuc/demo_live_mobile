@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Logo from './src/assets/images/live_logo.svg'
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -71,7 +72,7 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        <Logo style={{width:100, height:100}}></Logo>
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,

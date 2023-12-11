@@ -1,0 +1,14 @@
+{
+    "LOGIN": {
+    "TITLE": "ログイン",
+    "ID": "ID",
+    "PASSWORD": "パスワード",
+    "CHOOSE_A_COMPANY": "施設を選択してください。",
+    "HEADER": "CAREKARTE LIVE / ビデオ通話",
+    "FOOTER": ">>CARE CONNECT JAPAN,Inc.",
+    "LOGIN_ID": "職員ID",
+    "BUTTON_EXIT": "戻る",
+    "IS_SHOW_PASSWORD": "パスワードを表示する",
+    "METHOD_LOGIN": "メールアドレス または 携帯電話番号"
+  }
+}
