@@ -17,15 +17,24 @@ export const StyleNotifi = StyleSheet.create({
   },
   message: {
     backgroundColor: '#9999',
-    height: 300,
     width: '100%',
-    marginTop: 20
+    marginTop: 20,
+    marginBottom: 20,
+    paddingBottom: 40,
+    paddingLeft: 16,
+    paddingRight: 16,
+    minHeight:300
   },
   title: {
     fontSize: 20,
     color: 'black',
     textAlign: 'center',
     fontWeight: 'bold',
+  },
+  messageNotifi: {
+    fontSize: 16,
+    color: 'black',
+
   }
 
 });
