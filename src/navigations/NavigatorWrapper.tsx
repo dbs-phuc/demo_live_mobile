@@ -20,7 +20,7 @@ const NavigatorWrapper = ({navigation, route}: any) => {
       <SafeAreaProvider>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
         <Stack.Navigator
-          initialRouteName="NotifecationLogin"
+          initialRouteName="Login"
           screenOptions={{headerShown: false}}>
             <Stack.Screen name='NotifiLogin' component={NotifiLogin}/>
             <Stack.Screen name='Login' component={Login}/>

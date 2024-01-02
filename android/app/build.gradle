@@ -89,6 +89,7 @@ android {
             keyPassword 'android'
         }
     }
+    
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
@@ -96,11 +97,23 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+           // signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    flavorDimensions "default"
+productFlavors {
+    development {
+         resValue "string", "build_config_package", "com.demo_live_mobile"
+       
+    }
+    production {
+         resValue "string", "build_config_package", "com.demo_live_mobile"
+       
+    }
+}
+
 }
 
 dependencies {
@@ -119,5 +132,11 @@ dependencies {
         implementation jscFlavor
     }
 }
-
+project.ext.envConfigFiles = [
+	developmentdebug: ".env.development",
+	developmentrelease: ".env.development",
+    productiondebug: ".env.production",
+	productionrelease: ".env.production"
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
