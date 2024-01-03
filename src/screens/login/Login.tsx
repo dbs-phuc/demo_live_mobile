@@ -2,7 +2,7 @@ import {Button} from '@ui-kitten/components';
 import {StyleSheet, Text, View} from 'react-native';
 import ReactNativeBiometrics, {BiometryTypes} from 'react-native-biometrics';
 
-function Login() {
+function Login({navigation}: any) {
   const rnBiometrics = new ReactNativeBiometrics();
   async function isSensorAvailable() {
     const isDensorAvailable = await rnBiometrics.isSensorAvailable();
@@ -60,6 +60,9 @@ function Login() {
   
   }
 
+  function recoverScreens(): void {
+    navigation.navigate('Screens-3')  }
+
   return (
     <View style={{flex:1,justifyContent:'space-between'}}>
       <Button style={styles.box} onPress={() => isSensorAvailable()}>isSensorAvailable</Button>
@@ -68,6 +71,7 @@ function Login() {
       <Button style={styles.box} onPress={() => deleteKeys()}>deleteKeys</Button>
       <Button style={styles.box} onPress={() => createSignature()}>createSignature</Button>
       <Button style={styles.box} onPress={() => simplePrompt()}>simplePrompt</Button>
+      <Button style={styles.box} onPress={() => recoverScreens()}> Screens 003</Button>
     </View>
   );
 }
