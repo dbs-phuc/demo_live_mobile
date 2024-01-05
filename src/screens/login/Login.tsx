@@ -73,6 +73,10 @@ function Login({navigation}: any) {
     navigation.navigate('Screens-3');
   }
 
+  function openWebView(): void {
+    navigation.navigate('WebView');
+  }
+
   return (
     <View style={{flex: 1, justifyContent: 'space-between'}}>
       <Button style={styles.box} onPress={() => isSensorAvailable()}>
@@ -96,6 +100,7 @@ function Login({navigation}: any) {
       <Button style={styles.box} onPress={() => recoverScreens()}>
         Screens 003
       </Button>
+      <Button onPress={()=> openWebView()}>Screens WebView</Button>
     </View>
   );
 }
